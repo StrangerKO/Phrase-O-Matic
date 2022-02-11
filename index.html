@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <title>Phrase-O-Matic</title>
+          <meta charset="utf-8">
+          <style>
+          body{
+            font-family: Verdana,  Helvetica, sans-serif;
+          }
+
+          body {
+          background-color: skyblue;
+        }
+
+
+          </style>
+          <script type="text/javascript">
+          function makePhrases(optionNumber)
+          {
+
+            //this going to ger executed regardless
+
+            if(optionNumber==1)
+              {
+                var words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win", "3x30", "This is a code","iPod", "piano", "pirates"];
+                var words2 = ["empowered", "value-added", "oriented", "focused", "alingned", "Focus", "Epic", "iPad", "Dart", "pillow"];
+                var words3 = ["process", "solution", "tipping-point", "strategy", "vision", "Video Games", "basketball", "iPhone", "rocket", "cannibal"];
+                var words4 = ["telescope", "Diwali", "generate", "Roblox", "Minecraft", "=power", "grenade", "Mac","dog", "food"];
+
+                var rand1 = Math.floor(Math.random()* words1.length) ;
+                var rand2 = Math.floor(Math.random()* words2.length) ;
+                var rand3 = Math.floor(Math.random()*words3.length) ;
+                var rand4 = Math.floor(Math.random()*words4.length) ;
+
+                var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3] + " " + words4[rand4];
+                var phraseElement = document.getElementById("phrase1");
+                phraseElement.innerHTML = phrase;
+              }
+
+
+            else if (optionNumber==2)
+            {
+              var words5 = ["Superman","WonderWoman","Batman", "Shazam", "Flash", "Aquaman"];
+              var words6 = ["Is Clark Kent,", "is a god,", "is very rich,","has magic superpowers,", "is Barry Allen,", "is Arthur Curry,",];
+              var words7 = ["is an alien,", "is princess Diana,", "parents were killed by a robber,"," actual name is Billy Batson,", "can run so fast he can run back or forward in time,", "can see perfectly and breathe undewater,",];
+              var words8 = ["has tons of powers and is Kal El son of Jor el.", "is the GodKiller.", "is also known as the Caped Crusader and the Dark Knight.", "only has to say Shazam and gets transformed to his full potential.", "nickname is The Scarlet Speedster.","is an Atlantian."];
+
+              var rand5 = Math.floor(Math.random()* words5.length) ;
+              var rand6 = Math.floor(Math.random()* words6.length) ;
+              var rand7 = Math.floor(Math.random()*words7.length) ;
+              var rand8 = Math.floor(Math.random()*words8.length) ;
+
+              var phrase = words5[rand5] + " " + words6[rand6] + " " + words7[rand7]  + " " + words8[rand8];
+              var phraseElement = document.getElementById("phrase1");
+                phraseElement.innerHTML = phrase;
+            }
+
+         else if (optionNumber==3)
+         {
+           var words9 = ["Black Panther","Captain America","Spiderman","Hulk","Iron Man","Thor","Dr. Strange"];
+           var words10 = ["'s superpowers come from a heart shaped herb,","'s superpowers come from the Super Soldier Serum,","'s superpowers come from a radioactive spider,","'s superpowers come from Gamma Rays,","is rich so he built a suit which allows him to do cool things,","was banished to earth because of his arrogance by Odin,his father,","broke his arm and learnt to use his psychic powers,"];
+           var words11 = ["is the leader of the Wakandan tribe,","can run a mile in a minute,","has the DNA of a spider and his powers include climbing walls,webs,and amazing instinct.","has superstrength,superspeed,and is green.","can shoot lasers out his chest, ","has a hammer called Mjölnir,","became an Avenger,"];
+           var words12 = ["is Prince T'Chaka.","is Steve Rogers.","He is also Peter Parker.","is Bruce Banner.","and is Tony Stark.","and is the God of Thunder.","is Dr.Stephen Strange."];
+
+           var rand9 = Math.floor(Math.random()* words9.length)
+           var rand10 = Math.floor(Math.random()* words10.length) ;
+           var rand11 = Math.floor(Math.random()*words11.length) ;
+           var rand12 = Math.floor(Math.random()*words12.length) ;
+
+           var phrase = words9[rand9] + " " + words10[rand10] + " " + words11[rand11]  + " " + words12[rand12];
+           var phraseElement = document.getElementById("phrase1");
+             phraseElement.innerHTML = phrase;
+         }
+          }
+
+         window.onload = makePhrases;
+          </script>
+        </head>
+      <body>
+        <h1>Phrase-O-Matic Says:</h1>
+        <input type="submit" value="Generate Phrase 1" onclick="makePhrases(1)"><br><br>
+        <h1>Phrase-O-DC Superheros says:<h5>(Not true!!!)<br>(and not all of them!!!)</h5></h1>
+        <input type="submit" value="Generate Phrase 2" onclick="makePhrases(2)"><br><br>
+        <h1>Phrase-O-Marvel Superheros says:<h5>(Not true!!!)<br>(and not all of them!!!)</h5></h1>
+        <input type="submit" value="Generate Phrase 3" onclick="makePhrases(3)">
+        <label id="phrase1"></label><br><br>
+
+      </body>
+</html>
